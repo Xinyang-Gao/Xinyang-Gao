@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="search-container">
-  <input type="text" id="search-input" placeholder="search blog posts..." style="width: 90%;
+  <input type="text" id="search-input" placeholder="搜索……" style="width: 90%;
     height: 35px;
     color: #333;
     background-color: rgba(227,231,236,.2);
@@ -28,7 +28,7 @@ layout: default
 	resultsContainer: document.getElementById('results-container'),
 	json: '{{ site.baseurl }}/search.json',
 	searchResultTemplate: '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
-	noResultsText: 'No results found',
+	noResultsText: '没找到搜索结果',
 	limit: 10,
 	fuzzy: false,
 	exclude: ['Welcome']
@@ -36,7 +36,7 @@ layout: default
 </script>
  
 {% if site.posts.size == 0 %}
-  <h2>No post found</h2>
+  <h2>这里什么也没有……</h2>
 {% endif %}
 
 <div class="posts">
