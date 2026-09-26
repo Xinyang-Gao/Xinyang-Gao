@@ -72,7 +72,7 @@
 > **2023-11-14** 加入 GitHub · 关注者 **1** · 关注中 **9**
 >
 
-<sub>数据同步于 2026-09-27 00:15（UTC+8）</sub>
+<sub>数据同步于 2026-09-27 00:29（UTC+8）</sub>
 <!-- STATS_SUMMARY:END -->
 
 <div align="center">
@@ -108,25 +108,25 @@
 > 既能看到"总和"，也能看到每种语言的占比。数据每周由 Actions 自动刷新。
 
 <!-- LANG_STATS:START -->
-**全部自有仓库代码总量：`1.83 MB`**（1,916,754 字节） · 覆盖 **5** 种语言 · 统计范围：**7** 个非 Fork 仓库
+**全部自有仓库代码总量：`1.84 MB`**（1,932,847 字节） · 覆盖 **5** 种语言 · 统计范围：**7** 个非 Fork 仓库
 
 | 语言 | 占比 | 代码量 | 涉及仓库 |
 | :--- | :--- | ---: | ---: |
-| **HTML** | `▓▓▓▓▓░░░░░░░░░░░░░░░` 24.4% | 457.44 KB | 3 |
-| **TypeScript** | `▓▓▓▓▓░░░░░░░░░░░░░░░` 24.1% | 450.78 KB | 1 |
-| **CSS** | `▓▓▓▓░░░░░░░░░░░░░░░░` 22.0% | 411.35 KB | 3 |
-| **JavaScript** | `▓▓▓▓░░░░░░░░░░░░░░░░` 18.5% | 346.81 KB | 5 |
-| **Python** | `▓▓░░░░░░░░░░░░░░░░░░` 11.0% | 205.44 KB | 3 |
+| **HTML** | `▓▓▓▓▓░░░░░░░░░░░░░░░` 24.2% | 457.44 KB | 3 |
+| **TypeScript** | `▓▓▓▓▓░░░░░░░░░░░░░░░` 23.9% | 450.78 KB | 1 |
+| **CSS** | `▓▓▓▓░░░░░░░░░░░░░░░░` 21.8% | 411.35 KB | 3 |
+| **JavaScript** | `▓▓▓▓░░░░░░░░░░░░░░░░` 18.4% | 346.81 KB | 5 |
+| **Python** | `▓▓░░░░░░░░░░░░░░░░░░` 11.7% | 221.16 KB | 4 |
 
 <p>
-  <img src="https://img.shields.io/badge/HTML-24.4%25-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML 24.4%" />
-  <img src="https://img.shields.io/badge/TypeScript-24.1%25-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript 24.1%" />
-  <img src="https://img.shields.io/badge/CSS-22.0%25-663399?style=flat-square&logo=css3&logoColor=white" alt="CSS 22.0%" />
-  <img src="https://img.shields.io/badge/JavaScript-18.5%25-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript 18.5%" />
-  <img src="https://img.shields.io/badge/Python-11.0%25-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 11.0%" />
+  <img src="https://img.shields.io/badge/HTML-24.2%25-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML 24.2%" />
+  <img src="https://img.shields.io/badge/TypeScript-23.9%25-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript 23.9%" />
+  <img src="https://img.shields.io/badge/CSS-21.8%25-663399?style=flat-square&logo=css3&logoColor=white" alt="CSS 21.8%" />
+  <img src="https://img.shields.io/badge/JavaScript-18.4%25-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript 18.4%" />
+  <img src="https://img.shields.io/badge/Python-11.7%25-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 11.7%" />
 </p>
 
-<sub>最后更新：2026-09-27 00:15（UTC+8）</sub>
+<sub>最后更新：2026-09-27 00:29（UTC+8）</sub>
 <!-- LANG_STATS:END -->
 
 <sub>\* 统计口径为 GitHub Languages API 返回的**源码字节数**（不含 fork 仓库），与实际行数、文件数不完全等价。</sub>
@@ -134,11 +134,9 @@
 ## 🚀 精选项目
 
 <!-- PINNED_REPOS:START -->
-- [xinyang-gao.github.io](https://github.com/Xinyang-Gao/xinyang-gao.github.io) — 我的个人网站，Vite + TypeScript 构建，文章、作品、时间线与友链都在这里。
-- [cursor-fx-userscript](https://github.com/Xinyang-Gao/cursor-fx-userscript) — 一个 Tampermonkey 脚本，用平滑的点与圆环替换系统光标，支持悬停贴合、文本插入符与点击回弹。
-- [SVG2Desmos](https://github.com/Xinyang-Gao/SVG2Desmos) — 把 SVG 图形转换成可以直接粘贴进 Desmos 的数学公式。
-- [PCL2-Custom-Homepage-Creator](https://github.com/Xinyang-Gao/PCL2-Custom-Homepage-Creator) — PCL2 启动器的自定义主页制作器。
-- [gaoxinyang-works](https://github.com/Xinyang-Gao/gaoxinyang-works) — 作品集的页面源文件。
+- 🔗 [SVG2Desmos](https://github.com/Xinyang-Gao/SVG2Desmos) — Turn SVG graphics into math formulas you can directly paste into Desmos. <sub>(Python · ★ 1)</sub>
+- 🔗 [cursor-fx-userscript](https://github.com/Xinyang-Gao/cursor-fx-userscript) — A Tampermonkey userscript that replaces the system cursor with a smooth dot and ring cursor, featuring hover fitting, text caret mode, click spring scale, and scroll trail. <sub>(JavaScript · ★ 1)</sub>
+- 🔗 [xinyang-gao.github.io](https://github.com/Xinyang-Gao/xinyang-gao.github.io) — 我的个人网站 / My personal website <sub>(TypeScript · ★ 2)</sub>
 <!-- PINNED_REPOS:END -->
 
 ## 最近写的文章
