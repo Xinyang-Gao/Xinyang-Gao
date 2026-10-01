@@ -61,18 +61,18 @@
 
 <!-- STATS_SUMMARY:START -->
 <p>
-  <img src="https://img.shields.io/badge/%E5%85%AC%E5%BC%80%E4%BB%93%E5%BA%93-34-b45b63?style=flat-square&logo=github" alt="公开仓库" />
-  <img src="https://img.shields.io/badge/%E8%87%AA%E6%9C%89%E4%BB%93%E5%BA%93-7-b45b63?style=flat-square" alt="自有仓库" />
+  <img src="https://img.shields.io/badge/%E5%85%AC%E5%BC%80%E4%BB%93%E5%BA%93-35-b45b63?style=flat-square&logo=github" alt="公开仓库" />
+  <img src="https://img.shields.io/badge/%E8%87%AA%E6%9C%89%E4%BB%93%E5%BA%93-8-b45b63?style=flat-square" alt="自有仓库" />
   <img src="https://img.shields.io/badge/Fork%20%E4%BB%93%E5%BA%93-27-6d6d66?style=flat-square" alt="Fork 仓库" />
   <img src="https://img.shields.io/badge/Stars-4-b8860b?style=flat-square" alt="Stars" />
-  <img src="https://img.shields.io/badge/%E5%85%AC%E5%BC%80%E6%8F%90%E4%BA%A4-929-b45b63?style=flat-square" alt="公开提交" />
-  <img src="https://img.shields.io/badge/Followers-1-b45b63?style=flat-square" alt="Followers" />
+  <img src="https://img.shields.io/badge/%E5%85%AC%E5%BC%80%E6%8F%90%E4%BA%A4-937-b45b63?style=flat-square" alt="公开提交" />
+  <img src="https://img.shields.io/badge/Followers-2-b45b63?style=flat-square" alt="Followers" />
 </p>
 
-> **2023-11-14** 加入 GitHub · 关注者 **1** · 关注中 **9**
+> **2023-11-14** 加入 GitHub · 关注者 **2** · 关注中 **9**
 >
 
-<sub>数据同步于 2026-09-28 17:42（UTC+8）</sub>
+<sub>数据同步于 2026-10-02 01:53（UTC+8）</sub>
 <!-- STATS_SUMMARY:END -->
 
 <div align="center">
@@ -108,25 +108,27 @@
 > 既能看到"总和"，也能看到每种语言的占比。数据每周由 Actions 自动刷新。
 
 <!-- LANG_STATS:START -->
-**全部自有仓库代码总量：`1.71 MB`**（1,796,653 字节） · 覆盖 **5** 种语言 · 统计范围：**7** 个非 Fork 仓库
+**全部自有仓库代码总量：`1.83 MB`**（1,916,660 字节） · 覆盖 **6** 种语言 · 统计范围：**8** 个非 Fork 仓库
 
 | 语言 | 占比 | 代码量 | 涉及仓库 |
 | :--- | :--- | ---: | ---: |
-| **JavaScript** | `▓▓▓▓▓▓░░░░░░░░░░░░░░` 28.0% | 491.17 KB | 5 |
-| **CSS** | `▓▓▓▓▓░░░░░░░░░░░░░░░` 26.5% | 465.68 KB | 3 |
-| **TypeScript** | `▓▓▓▓▓░░░░░░░░░░░░░░░` 26.1% | 458.57 KB | 1 |
-| **Python** | `▓▓▓░░░░░░░░░░░░░░░░░` 12.6% | 221.16 KB | 4 |
-| **HTML** | `▓░░░░░░░░░░░░░░░░░░░` 6.7% | 117.97 KB | 3 |
+| **JavaScript** | `▓▓▓▓▓░░░░░░░░░░░░░░░` 26.2% | 491.17 KB | 5 |
+| **CSS** | `▓▓▓▓▓░░░░░░░░░░░░░░░` 24.9% | 465.68 KB | 3 |
+| **TypeScript** | `▓▓▓▓▓░░░░░░░░░░░░░░░` 24.5% | 458.57 KB | 1 |
+| **Python** | `▓▓░░░░░░░░░░░░░░░░░░` 11.8% | 221.16 KB | 4 |
+| **HTML** | `▓░░░░░░░░░░░░░░░░░░░` 6.3% | 117.97 KB | 3 |
+| **Java** | `▓░░░░░░░░░░░░░░░░░░░` 6.3% | 117.19 KB | 1 |
 
 <p>
-  <img src="https://img.shields.io/badge/JavaScript-28.0%25-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript 28.0%" />
-  <img src="https://img.shields.io/badge/CSS-26.5%25-663399?style=flat-square&logo=css3&logoColor=white" alt="CSS 26.5%" />
-  <img src="https://img.shields.io/badge/TypeScript-26.1%25-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript 26.1%" />
-  <img src="https://img.shields.io/badge/Python-12.6%25-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 12.6%" />
-  <img src="https://img.shields.io/badge/HTML-6.7%25-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML 6.7%" />
+  <img src="https://img.shields.io/badge/JavaScript-26.2%25-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript 26.2%" />
+  <img src="https://img.shields.io/badge/CSS-24.9%25-663399?style=flat-square&logo=css3&logoColor=white" alt="CSS 24.9%" />
+  <img src="https://img.shields.io/badge/TypeScript-24.5%25-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript 24.5%" />
+  <img src="https://img.shields.io/badge/Python-11.8%25-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 11.8%" />
+  <img src="https://img.shields.io/badge/HTML-6.3%25-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML 6.3%" />
+  <img src="https://img.shields.io/badge/Java-6.3%25-B07219?style=flat-square&logo=openjdk&logoColor=white" alt="Java 6.3%" />
 </p>
 
-<sub>最后更新：2026-09-28 17:42（UTC+8）</sub>
+<sub>最后更新：2026-10-02 01:53（UTC+8）</sub>
 <!-- LANG_STATS:END -->
 
 <sub>\* 统计口径为 GitHub Languages API 返回的**源码字节数**（不含 fork 仓库），与实际行数、文件数不完全等价。</sub>
@@ -134,9 +136,10 @@
 ## 🚀 精选项目
 
 <!-- PINNED_REPOS:START -->
-- 🔗 [SVG2Desmos](https://github.com/Xinyang-Gao/SVG2Desmos) — Turn SVG graphics into math formulas you can directly paste into Desmos. <sub>(Python · ★ 1)</sub>
-- 🔗 [cursor-fx-userscript](https://github.com/Xinyang-Gao/cursor-fx-userscript) — A Tampermonkey userscript that replaces the system cursor with a smooth dot and ring cursor, featuring hover fitting, text caret mode, click spring scale, and scroll trail. <sub>(JavaScript · ★ 1)</sub>
+- 🔗 [bundle-stash](https://github.com/Xinyang-Gao/bundle-stash) — Shows the contents of all your bundles in a sidebar on container screens, with categories, search, and one-click deposit/withdraw. <sub>(Java · ★ 1)</sub>
 - 🔗 [xinyang-gao.github.io](https://github.com/Xinyang-Gao/xinyang-gao.github.io) — 我的个人网站 / My personal website <sub>(TypeScript · ★ 2)</sub>
+- 🔗 [SVG2Desmos](https://github.com/Xinyang-Gao/SVG2Desmos) — Turn SVG graphics into math formulas you can directly paste into Desmos. <sub>(Python · ★ 1)</sub>
+- 🔗 [cursor-fx-userscript](https://github.com/Xinyang-Gao/cursor-fx-userscript) — A Tampermonkey userscript that replaces the system cursor with a smooth dot and ring cursor, featuring hover fitting, text caret mode, click spring scale, and scroll trail. <sub>(JavaScript)</sub>
 <!-- PINNED_REPOS:END -->
 
 ## 最近写的文章
