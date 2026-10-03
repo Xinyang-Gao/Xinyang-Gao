@@ -61,18 +61,18 @@
 
 <!-- STATS_SUMMARY:START -->
 <p>
-  <img src="https://img.shields.io/badge/%E5%85%AC%E5%BC%80%E4%BB%93%E5%BA%93-35-b45b63?style=flat-square&logo=github" alt="公开仓库" />
+  <img src="https://img.shields.io/badge/%E5%85%AC%E5%BC%80%E4%BB%93%E5%BA%93-33-b45b63?style=flat-square&logo=github" alt="公开仓库" />
   <img src="https://img.shields.io/badge/%E8%87%AA%E6%9C%89%E4%BB%93%E5%BA%93-8-b45b63?style=flat-square" alt="自有仓库" />
-  <img src="https://img.shields.io/badge/Fork%20%E4%BB%93%E5%BA%93-27-6d6d66?style=flat-square" alt="Fork 仓库" />
+  <img src="https://img.shields.io/badge/Fork%20%E4%BB%93%E5%BA%93-25-6d6d66?style=flat-square" alt="Fork 仓库" />
   <img src="https://img.shields.io/badge/Stars-4-b8860b?style=flat-square" alt="Stars" />
-  <img src="https://img.shields.io/badge/%E5%85%AC%E5%BC%80%E6%8F%90%E4%BA%A4-937-b45b63?style=flat-square" alt="公开提交" />
+  <img src="https://img.shields.io/badge/%E5%85%AC%E5%BC%80%E6%8F%90%E4%BA%A4-950-b45b63?style=flat-square" alt="公开提交" />
   <img src="https://img.shields.io/badge/Followers-2-b45b63?style=flat-square" alt="Followers" />
 </p>
 
-> **2023-11-14** 加入 GitHub · 关注者 **2** · 关注中 **9**
+> **2023-11-14** 加入 GitHub · 关注者 **2** · 关注中 **8**
 >
 
-<sub>数据同步于 2026-10-02 01:53（UTC+8）</sub>
+<sub>数据同步于 2026-10-04 03:49（UTC+8）</sub>
 <!-- STATS_SUMMARY:END -->
 
 <div align="center">
@@ -108,27 +108,27 @@
 > 既能看到"总和"，也能看到每种语言的占比。数据每周由 Actions 自动刷新。
 
 <!-- LANG_STATS:START -->
-**全部自有仓库代码总量：`1.83 MB`**（1,916,660 字节） · 覆盖 **6** 种语言 · 统计范围：**8** 个非 Fork 仓库
+**全部自有仓库代码总量：`1.99 MB`**（2,090,022 字节） · 覆盖 **6** 种语言 · 统计范围：**8** 个非 Fork 仓库
 
 | 语言 | 占比 | 代码量 | 涉及仓库 |
 | :--- | :--- | ---: | ---: |
-| **JavaScript** | `▓▓▓▓▓░░░░░░░░░░░░░░░` 26.2% | 491.17 KB | 5 |
-| **CSS** | `▓▓▓▓▓░░░░░░░░░░░░░░░` 24.9% | 465.68 KB | 3 |
-| **TypeScript** | `▓▓▓▓▓░░░░░░░░░░░░░░░` 24.5% | 458.57 KB | 1 |
-| **Python** | `▓▓░░░░░░░░░░░░░░░░░░` 11.8% | 221.16 KB | 4 |
-| **HTML** | `▓░░░░░░░░░░░░░░░░░░░` 6.3% | 117.97 KB | 3 |
-| **Java** | `▓░░░░░░░░░░░░░░░░░░░` 6.3% | 117.19 KB | 1 |
+| **TypeScript** | `▓▓▓▓▓▓░░░░░░░░░░░░░░` 32.0% | 653.20 KB | 2 |
+| **CSS** | `▓▓▓▓▓░░░░░░░░░░░░░░░` 23.6% | 481.42 KB | 3 |
+| **JavaScript** | `▓▓▓░░░░░░░░░░░░░░░░░` 17.0% | 346.78 KB | 5 |
+| **Python** | `▓▓▓░░░░░░░░░░░░░░░░░` 15.4% | 314.31 KB | 4 |
+| **HTML** | `▓░░░░░░░░░░░░░░░░░░░` 6.1% | 125.29 KB | 3 |
+| **Java** | `▓░░░░░░░░░░░░░░░░░░░` 5.9% | 120.03 KB | 1 |
 
 <p>
-  <img src="https://img.shields.io/badge/JavaScript-26.2%25-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript 26.2%" />
-  <img src="https://img.shields.io/badge/CSS-24.9%25-663399?style=flat-square&logo=css3&logoColor=white" alt="CSS 24.9%" />
-  <img src="https://img.shields.io/badge/TypeScript-24.5%25-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript 24.5%" />
-  <img src="https://img.shields.io/badge/Python-11.8%25-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 11.8%" />
-  <img src="https://img.shields.io/badge/HTML-6.3%25-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML 6.3%" />
-  <img src="https://img.shields.io/badge/Java-6.3%25-B07219?style=flat-square&logo=openjdk&logoColor=white" alt="Java 6.3%" />
+  <img src="https://img.shields.io/badge/TypeScript-32.0%25-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript 32.0%" />
+  <img src="https://img.shields.io/badge/CSS-23.6%25-663399?style=flat-square&logo=css3&logoColor=white" alt="CSS 23.6%" />
+  <img src="https://img.shields.io/badge/JavaScript-17.0%25-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript 17.0%" />
+  <img src="https://img.shields.io/badge/Python-15.4%25-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 15.4%" />
+  <img src="https://img.shields.io/badge/HTML-6.1%25-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML 6.1%" />
+  <img src="https://img.shields.io/badge/Java-5.9%25-B07219?style=flat-square&logo=openjdk&logoColor=white" alt="Java 5.9%" />
 </p>
 
-<sub>最后更新：2026-10-02 01:53（UTC+8）</sub>
+<sub>最后更新：2026-10-04 03:49（UTC+8）</sub>
 <!-- LANG_STATS:END -->
 
 <sub>\* 统计口径为 GitHub Languages API 返回的**源码字节数**（不含 fork 仓库），与实际行数、文件数不完全等价。</sub>
