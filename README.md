@@ -144,7 +144,7 @@
 
 ## 最近写的文章
 
-<!-- BLOG-POST-LIST:START --><a href="https://xinyang-gao.github.io/articles/家乡的秋天.html"><b>家乡的秋天</b></a> · <sub>2026年00月19日</sub><br><a href="https://xinyang-gao.github.io/articles/我帮Tooltip治好了强迫换行症过程比想象中曲折.html"><b>我帮 Tooltip 治好了&quot;强迫换行症&quot;，过程比想象中曲折</b></a> · <sub>2026年00月28日</sub><br><a href="https://xinyang-gao.github.io/works/pixiv图片检索/"><b>pixiv图片检索</b></a> · <sub>2026年00月14日</sub><br><a href="https://xinyang-gao.github.io/articles/太阳偷喝了柿子酒.html"><b>太阳偷喝了柿子酒</b></a> · <sub>2026年00月11日</sub><br><a href="https://xinyang-gao.github.io/articles/小钟摆.html"><b>小钟摆</b></a> · <sub>2026年00月08日</sub><br><!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START --><a href="https://github.com/Xinyang-Gao/bundle-stash"><b>探囊取物</b></a> · <sub>2026年00月01日</sub><br><a href="https://xinyang-gao.github.io/works/SVG绘制动画/"><b>SVG绘制动画</b></a> · <sub>2026年00月26日</sub><br><a href="https://xinyang-gao.github.io/articles/家乡的秋天.html"><b>家乡的秋天</b></a> · <sub>2026年00月19日</sub><br><a href="https://xinyang-gao.github.io/articles/我帮Tooltip治好了强迫换行症过程比想象中曲折.html"><b>我帮 Tooltip 治好了&quot;强迫换行症&quot;，过程比想象中曲折</b></a> · <sub>2026年00月28日</sub><br><a href="https://xinyang-gao.github.io/works/pixiv图片检索/"><b>pixiv图片检索</b></a> · <sub>2026年00月14日</sub><br><!-- BLOG-POST-LIST:END -->
 
 <sub>内容来自个人网站的 [RSS](https://xinyang-gao.github.io/rss.xml)，每天自动同步。</sub>
 
