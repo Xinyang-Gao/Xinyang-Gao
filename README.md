@@ -64,7 +64,7 @@
   <img src="https://img.shields.io/badge/%E5%85%AC%E5%BC%80%E4%BB%93%E5%BA%93-33-b45b63?style=flat-square&logo=github" alt="公开仓库" />
   <img src="https://img.shields.io/badge/%E8%87%AA%E6%9C%89%E4%BB%93%E5%BA%93-8-b45b63?style=flat-square" alt="自有仓库" />
   <img src="https://img.shields.io/badge/Fork%20%E4%BB%93%E5%BA%93-25-6d6d66?style=flat-square" alt="Fork 仓库" />
-  <img src="https://img.shields.io/badge/Stars-4-b8860b?style=flat-square" alt="Stars" />
+  <img src="https://img.shields.io/badge/Stars-5-b8860b?style=flat-square" alt="Stars" />
   <img src="https://img.shields.io/badge/%E5%85%AC%E5%BC%80%E6%8F%90%E4%BA%A4-957-b45b63?style=flat-square" alt="公开提交" />
   <img src="https://img.shields.io/badge/Followers-2-b45b63?style=flat-square" alt="Followers" />
 </p>
@@ -72,7 +72,7 @@
 > **2023-11-14** 加入 GitHub · 关注者 **2** · 关注中 **8**
 >
 
-<sub>数据同步于 2026-10-05 18:22（UTC+8）</sub>
+<sub>数据同步于 2026-10-12 18:44（UTC+8）</sub>
 <!-- STATS_SUMMARY:END -->
 
 <div align="center">
@@ -128,7 +128,7 @@
   <img src="https://img.shields.io/badge/Java-5.8%25-B07219?style=flat-square&logo=openjdk&logoColor=white" alt="Java 5.8%" />
 </p>
 
-<sub>最后更新：2026-10-05 18:22（UTC+8）</sub>
+<sub>最后更新：2026-10-12 18:44（UTC+8）</sub>
 <!-- LANG_STATS:END -->
 
 <sub>\* 统计口径为 GitHub Languages API 返回的**源码字节数**（不含 fork 仓库），与实际行数、文件数不完全等价。</sub>
@@ -138,7 +138,7 @@
 <!-- PINNED_REPOS:START -->
 - 🔗 [bundle-stash](https://github.com/Xinyang-Gao/bundle-stash) — Shows the contents of all your bundles in a sidebar on container screens, with categories, search, and one-click deposit/withdraw. <sub>(Java · ★ 1)</sub>
 - 🔗 [xinyang-gao.github.io](https://github.com/Xinyang-Gao/xinyang-gao.github.io) — 我的个人网站 / My personal website <sub>(TypeScript · ★ 2)</sub>
-- 🔗 [SVG2Desmos](https://github.com/Xinyang-Gao/SVG2Desmos) — Turn SVG graphics into math formulas you can directly paste into Desmos. <sub>(Python · ★ 1)</sub>
+- 🔗 [SVG2Desmos](https://github.com/Xinyang-Gao/SVG2Desmos) — Turn SVG graphics into math formulas you can directly paste into Desmos. <sub>(Python · ★ 2)</sub>
 - 🔗 [cursor-fx-userscript](https://github.com/Xinyang-Gao/cursor-fx-userscript) — A Tampermonkey userscript that replaces the system cursor with a smooth dot and ring cursor, featuring hover fitting, text caret mode, click spring scale, and scroll trail. <sub>(JavaScript)</sub>
 <!-- PINNED_REPOS:END -->
 
