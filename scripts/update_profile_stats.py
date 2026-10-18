@@ -1,19 +1,22 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""聚合 GitHub 账号数据，并把结果写回 README.md 的指定区块。
+"""Aggregate GitHub account data and write it back into README.md.
 
-用法::
+聚合 GitHub 账号数据，并把结果写回 README.md 的指定区块。
+
+Usage / 用法::
 
     python scripts/update_profile_stats.py --user Xinyang-Gao
     python scripts/update_profile_stats.py --user Xinyang-Gao --include-forks
 
-README 中需要成对出现的区块标记::
+README 中需要成对出现的区块标记 / Required paired markers in README.md::
 
     <!-- STATS_SUMMARY:START --> ... <!-- STATS_SUMMARY:END -->
     <!-- LANG_STATS:START -->   ... <!-- LANG_STATS:END -->
-    <!-- PINNED_REPOS:START --> ... <!-- PINNED_REPOS:END -->   # 需要 GITHUB_TOKEN
+    <!-- PINNED_REPOS:START --> ... <!-- PINNED_REPOS:END -->   # 需要 GITHUB_TOKEN / needs token
 
-环境变量 ``GITHUB_TOKEN`` 可选：提供后可获得 5000/小时 的配额，并用于拉取 Pinned 仓库。
+环境变量 ``GITHUB_TOKEN`` 可选 / optional：提供后可获得 5000 次/小时 的配额，
+并用于拉取 Pinned 仓库 / enables the 5000 req/h quota and is required for fetching pinned repos.
 """
 
 from __future__ import annotations
@@ -34,9 +37,10 @@ ACCEPT = "application/vnd.github+json"
 API_VERSION = "2022-11-28"
 UA = "xinyang-profile-readme-updater"
 
-ACCENT = "b45b63"  # 与个人网站保持一致的强调色
+ACCENT = "b45b63"  # 与个人网站保持一致的强调色 / accent color matching the personal site
 
 # GitHub / linguist 常见语言配色，用于生成徽章
+# Common GitHub / linguist language colors, used for generating badges
 LANG_COLORS = {
     "Python": "3776AB",
     "TypeScript": "3178C6",
@@ -68,6 +72,7 @@ LANG_COLORS = {
 }
 
 # 只有确定存在的 simple-icons slug 才加 logo，避免出现裂图
+# Only attach logos for known simple-icons slugs to avoid broken images
 LANG_LOGOS = {
     "Python": ("python", "white"),
     "TypeScript": ("typescript", "white"),
@@ -95,7 +100,9 @@ LANG_LOGOS = {
 # HTTP
 # --------------------------------------------------------------------------- #
 def http_json(url: str, token: str | None = None, tries: int = 4) -> dict | list:
-    """请求 GitHub REST API，遇到速率限制时自动等待重试。"""
+    """请求 GitHub REST API，遇到速率限制时自动等待重试。
+    Call the GitHub REST API; automatically waits and retries on rate limits.
+    """
     for attempt in range(tries):
         req = urllib.request.Request(
             url,
@@ -113,20 +120,22 @@ def http_json(url: str, token: str | None = None, tries: int = 4) -> dict | list
                 return json.loads(resp.read().decode("utf-8"))
         except urllib.error.HTTPError as err:
             if attempt == tries - 1:
-                raise RuntimeError(f"GET {url} 失败：HTTP {err.code} {err.reason}") from err
+                raise RuntimeError(
+                    f"GET {url} 失败 / failed：HTTP {err.code} {err.reason}"
+                ) from err
             if err.code in (403, 429):
                 wait = rate_limit_wait_seconds(err.headers, attempt)
-                print(f"  ! 速率限制触发，等待 {wait}s 后重试", flush=True)
+                print(f"  ! 触发速率限制，等待 / rate limited, retrying in {wait}s", flush=True)
                 time.sleep(wait)
             elif 500 <= err.code < 600:
-                print(f"  ! 服务端错误 {err.code}，{5 * (attempt + 1)}s 后重试", flush=True)
+                print(f"  ! 服务端错误 / server error {err.code}，{5 * (attempt + 1)}s 后重试 / retrying", flush=True)
                 time.sleep(5 * (attempt + 1))
             else:
                 raise
         except (urllib.error.URLError, TimeoutError) as err:
             if attempt == tries - 1:
                 raise
-            print(f"  ! 网络异常（{err}），{5 * (attempt + 1)}s 后重试", flush=True)
+            print(f"  ! 网络异常 / network error（{err}），{5 * (attempt + 1)}s 后重试 / retrying", flush=True)
             time.sleep(5 * (attempt + 1))
     raise RuntimeError("unreachable")
 
@@ -141,7 +150,9 @@ def rate_limit_wait_seconds(headers, attempt: int) -> int:
 
 
 def paginate(path: str, token: str | None = None) -> list:
-    """按 Link 头翻页，直到拿完所有结果。"""
+    """按 Link 头翻页，直到拿完所有结果。
+    Follow pagination until all pages have been fetched.
+    """
     items: list = []
     page = 1
     sep = "&" if "?" in path else "?"
@@ -157,7 +168,7 @@ def paginate(path: str, token: str | None = None) -> list:
 
 
 # --------------------------------------------------------------------------- #
-# 格式化
+# 格式化 / Formatting
 # --------------------------------------------------------------------------- #
 def human_size(num_bytes: int) -> str:
     size = float(num_bytes)
@@ -173,7 +184,9 @@ def fmt_percent(value: float) -> str:
 
 
 def bar(percent: float, width: int = 20) -> str:
-    """用方块字符画进度条，GitHub 渲染无依赖。"""
+    """用方块字符画进度条，GitHub 渲染无依赖。
+    Draw a bar with block characters — no assets required on GitHub.
+    """
     filled = int(round(percent / 100 * width))
     filled = max(0, min(width, filled))
     return "▓" * filled + "░" * (width - filled)
@@ -194,19 +207,23 @@ def badge(label: str, message: str, color: str, logo: str | None = None,
 
 
 # --------------------------------------------------------------------------- #
-# 数据收集
+# 数据收集 / Data collection
 # --------------------------------------------------------------------------- #
 def collect(user: str, token: str | None, include_forks: bool) -> dict:
-    print(f"→ 读取用户 @{user} 信息", flush=True)
+    print(f"→ 读取用户信息 / Reading user: @{user}", flush=True)
     profile = http_json(f"{API}/users/{user}", token)
 
-    print("→ 读取仓库列表", flush=True)
+    print("→ 读取仓库列表 / Reading repository list", flush=True)
     repos = paginate(f"/users/{user}/repos", token)
 
     targets = repos if include_forks else [r for r in repos if not r.get("fork")]
-    print(f"  共 {len(repos)} 个公开仓库，其中 {len(targets)} 个参与统计", flush=True)
+    print(
+        f"  共 / total {len(repos)} 个公开仓库 / public repos，"
+        f"其中 / {len(targets)} 个参与统计 / used for stats",
+        flush=True,
+    )
 
-    print("→ 汇总各仓库语言字节数", flush=True)
+    print("→ 汇总各仓库语言字节数 / Aggregating language bytes", flush=True)
     lang_bytes: dict[str, int] = {}
     lang_repos: dict[str, set[str]] = {}
     total_bytes = 0
@@ -215,7 +232,7 @@ def collect(user: str, token: str | None, include_forks: bool) -> dict:
         try:
             langs = http_json(f"{API}/repos/{user}/{name}/languages", token)
         except RuntimeError as err:
-            print(f"  ! 跳过 {name}：{err}", flush=True)
+            print(f"  ! 跳过 / skip {name}：{err}", flush=True)
             continue
         if not langs:
             continue
@@ -224,7 +241,7 @@ def collect(user: str, token: str | None, include_forks: bool) -> dict:
             lang_repos.setdefault(language, set()).add(name)
             total_bytes += value
         if idx % 10 == 0:
-            print(f"  · 已处理 {idx}/{len(targets)}", flush=True)
+            print(f"  · 已处理 / processed {idx}/{len(targets)}", flush=True)
         time.sleep(0.05)
 
     commits = None
@@ -235,7 +252,7 @@ def collect(user: str, token: str | None, include_forks: bool) -> dict:
         )
         commits = int(search.get("total_count", 0))
     except RuntimeError as err:
-        print(f"  ! 提交数获取失败：{err}", flush=True)
+        print(f"  ! 提交数获取失败 / failed to fetch commit count：{err}", flush=True)
 
     return {
         "profile": profile,
@@ -249,7 +266,9 @@ def collect(user: str, token: str | None, include_forks: bool) -> dict:
 
 
 def fetch_pinned(user: str, token: str) -> list[dict]:
-    """读取 Pin 到主页的仓库（GraphQL，需要 token）。"""
+    """读取 Pin 到主页的仓库（GraphQL，需要 token）。
+    Read the repositories pinned to the profile (GraphQL, requires a token).
+    """
     query = """
     query Pinned($login: String!) {
       user(login: $login) {
@@ -284,17 +303,17 @@ def fetch_pinned(user: str, token: str) -> list[dict]:
         with urllib.request.urlopen(req, timeout=30) as resp:
             data = json.loads(resp.read().decode("utf-8"))
     except Exception as err:  # noqa: BLE001
-        print(f"  ! GraphQL 请求失败：{err}", flush=True)
+        print(f"  ! GraphQL 请求失败 / request failed：{err}", flush=True)
         return []
 
     if data.get("errors"):
-        print(f"  ! GraphQL 返回错误：{data['errors'][0].get('message')}", flush=True)
+        print(f"  ! GraphQL 返回错误 / returned error：{data['errors'][0].get('message')}", flush=True)
         return []
     return (data.get("data", {}).get("user") or {}).get("pinnedItems", {}).get("nodes", [])
 
 
 # --------------------------------------------------------------------------- #
-# 区块渲染
+# 区块渲染 / Section rendering
 # --------------------------------------------------------------------------- #
 def render_stats_summary(data: dict, updated_at: str) -> str:
     profile = data["profile"]
@@ -303,24 +322,39 @@ def render_stats_summary(data: dict, updated_at: str) -> str:
 
     forks = sum(1 for r in repos if r.get("fork"))
     stars = sum(int(r.get("stargazers_count", 0)) for r in targets)
-    # 自有仓库中被 fork 的次数
     forks_received = sum(int(r.get("forks_count", 0)) for r in targets)
     commits = data["commits"]
+
     joined = profile.get("created_at", "")[:10]
+    followers = profile.get("followers", 0)
+    following = profile.get("following", 0)
+    gists = profile.get("public_gists", 0)
 
     items = [
-        ("公开仓库", len(repos), ACCENT, "github"),
-        ("自有仓库", len(targets), ACCENT, None),
+        ("Public Repos", len(repos), ACCENT, "github"),
+        ("Own Repos", len(targets), ACCENT, None),
     ]
     if forks:
-        items.append(("Fork 仓库", forks, "6d6d66", None))
+        items.append(("Forks", forks, "6d6d66", None))
     if stars:
         items.append(("Stars", stars, "b8860b", None))
     if forks_received:
         items.append(("Forked by", forks_received, "6d6d66", None))
     if commits is not None:
-        items.append(("公开提交", commits, ACCENT, None))
-    items.append(("Followers", profile.get("followers", 0), ACCENT, None))
+        items.append(("Commits", commits, ACCENT, None))
+    items.append(("Followers", followers, ACCENT, None))
+
+    summary_zh = (
+        f"> **{joined}** 加入 GitHub · 关注者 **{followers}**"
+        f" · 关注中 **{following}**"
+        + (f" · 📮 Gists **{gists}**" if gists else "")
+    )
+    summary_en = (
+        f"> *Joined **{joined}** · Followers **{followers}**"
+        f" · Following **{following}**"
+        + (f" · Gists **{gists}**" if gists else "")
+        + "*"
+    )
 
     lines = ["<p>"]
     for label, value, color, logo in items:
@@ -328,12 +362,11 @@ def render_stats_summary(data: dict, updated_at: str) -> str:
     lines += [
         "</p>",
         "",
-        f"> **{joined}** 加入 GitHub · 关注者 **{profile.get('followers', 0)}**"
-        f" · 关注中 **{profile.get('following', 0)}**"
-        + (f" · 📮 Gists **{profile.get('public_gists', 0)}**" if profile.get("public_gists") else ""),
+        summary_zh,
         ">",
+        summary_en,
         "",
-        f"<sub>数据同步于 {updated_at}（UTC+8）</sub>",
+        f"<sub>数据同步于 / synced at {updated_at}（UTC+8）</sub>",
     ]
     return "\n".join(lines)
 
@@ -345,16 +378,18 @@ def render_lang_stats(data: dict, updated_at: str) -> str:
     targets = data["targets"]
 
     if not lang_bytes:
-        return "_暂时没有可统计的语言数据。_"
+        return "_暂时没有可统计的语言数据 / No language data to report yet._"
 
     ordered = sorted(lang_bytes.items(), key=lambda kv: kv[1], reverse=True)
 
     lines = [
-        f"**全部自有仓库代码总量：`{human_size(total)}`**"
-        f"（{total:,} 字节） · 覆盖 **{len(ordered)}** 种语言"
-        f" · 统计范围：**{len(targets)}** 个非 Fork 仓库",
+        f"**全部自有仓库代码总量 / Total own-repo code：`{human_size(total)}`**"
+        f"（{total:,} 字节 / bytes）",
         "",
-        "| 语言 | 占比 | 代码量 | 涉及仓库 |",
+        f"覆盖 / covering **{len(ordered)}** 种语言 / languages"
+        f" · 统计范围 / scope：**{len(targets)}** 个非 Fork 仓库 / non-fork repos",
+        "",
+        "| 语言 / Language | 占比 / Share | 代码量 / Size | 仓库数 / Repos |",
         "| :--- | :--- | ---: | ---: |",
     ]
 
@@ -365,10 +400,7 @@ def render_lang_stats(data: dict, updated_at: str) -> str:
             f" | {human_size(value)} | {len(lang_repos.get(language, ()))} |"
         )
 
-    lines += [
-        "",
-        "<p>",
-    ]
+    lines += ["", "<p>"]
     for language, value in ordered[:8]:
         percent = value / total * 100 if total else 0.0
         color = LANG_COLORS.get(language, "6d6d66")
@@ -377,11 +409,11 @@ def render_lang_stats(data: dict, updated_at: str) -> str:
             f'  <img src="{badge(language, fmt_percent(percent), color, logo, logo_color)}"'
             f' alt="{language} {fmt_percent(percent)}" />'
         )
-    lines += ["</p>", "", f"<sub>最后更新：{updated_at}（UTC+8）</sub>"]
+    lines += ["</p>", "", f"<sub>最后更新 / updated at {updated_at}（UTC+8）</sub>"]
     return "\n".join(lines)
 
 
-def render_pinned(nodes: list[dict]) -> str:
+def render_pinned(nodes: list[dict]) -> str | None:
     if not nodes:
         return None
     lines = []
@@ -401,10 +433,12 @@ def render_pinned(nodes: list[dict]) -> str:
 
 
 # --------------------------------------------------------------------------- #
-# 写回 README
+# 写回 README / Write back to README
 # --------------------------------------------------------------------------- #
 def replace_block(text: str, name: str, body: str | None) -> str:
-    """替换 <!-- NAME:START --> 与 <!-- NAME:END --> 之间的内容。"""
+    """替换 <!-- NAME:START --> 与 <!-- NAME:END --> 之间的内容。
+    Replace the content between <!-- NAME:START --> and <!-- NAME:END -->.
+    """
     if body is None:
         return text
     pattern = re.compile(
@@ -412,7 +446,7 @@ def replace_block(text: str, name: str, body: str | None) -> str:
     )
     match = pattern.search(text)
     if not match:
-        print(f"  ! README 中未找到 {name} 区块，已跳过", flush=True)
+        print(f"  ! README 中未找到 {name} 区块，已跳过 / block not found, skipped", flush=True)
         return text
     return f"{match.group(1)}\n{body}\n{match.group(3)}".join(
         [text[: match.start()], text[match.end():]]
@@ -420,15 +454,25 @@ def replace_block(text: str, name: str, body: str | None) -> str:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="更新 README 中的 GitHub 数据区块")
-    parser.add_argument("--user", default="Xinyang-Gao", help="GitHub 用户名")
-    parser.add_argument("--readme", default="README.md", help="README 文件路径")
-    parser.add_argument("--include-forks", action="store_true", help="统计时也包含 Fork 仓库")
+    parser = argparse.ArgumentParser(
+        description="更新 README 中的 GitHub 数据区块 / Update GitHub stats blocks in README"
+    )
+    parser.add_argument("--user", default="Xinyang-Gao", help="GitHub 用户名 / GitHub username")
+    parser.add_argument("--readme", default="README.md", help="README 文件路径 / path to README")
+    parser.add_argument(
+        "--include-forks",
+        action="store_true",
+        help="统计时也包含 Fork 仓库 / include fork repos in stats",
+    )
     parser.add_argument("--token", default=os.environ.get("GITHUB_TOKEN"), help="GitHub Token")
     args = parser.parse_args()
 
     token = (args.token or "").strip() or None
-    print(f"认证方式：{'Token' if token else '匿名（60 次/小时配额）'}", flush=True)
+    print(
+        "认证方式 / auth："
+        + ("Token" if token else "匿名 / anonymous（60 次/小时, 60 req/h）"),
+        flush=True,
+    )
 
     data = collect(args.user, token, args.include_forks)
     updated_at = datetime.fromtimestamp(
@@ -437,7 +481,7 @@ def main() -> int:
 
     pinned = fetch_pinned(args.user, token) if token else []
     if token and not pinned:
-        print("  · 没有 Pin 任何仓库，保留原有内容", flush=True)
+        print("  · 没有 Pin 任何仓库，保留原有内容 / no pinned repos, keeping existing content", flush=True)
 
     with open(args.readme, "r", encoding="utf-8", newline="\n") as fh:
         original = fh.read()
@@ -447,12 +491,12 @@ def main() -> int:
     text = replace_block(text, "PINNED_REPOS", render_pinned(pinned))
 
     if text == original:
-        print("→ README 内容无变化", flush=True)
+        print("→ README 内容无变化 / no changes", flush=True)
         return 0
 
     with open(args.readme, "w", encoding="utf-8", newline="\n") as fh:
         fh.write(text)
-    print("→ README 已更新", flush=True)
+    print("→ README 已更新 / updated", flush=True)
     return 0
 
 

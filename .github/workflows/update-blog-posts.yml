@@ -1,8 +1,9 @@
-name: 同步最近文章
+name: 同步最近文章 / Sync Recent Posts
 
 on:
   schedule:
     # 每天 08:23（北京时间）拉取一次博客 RSS
+    # Fetch the blog RSS once a day at 08:23 (UTC+8)
     - cron: "23 0 * * *"
   workflow_dispatch:
 
@@ -13,10 +14,10 @@ jobs:
   update-blog-posts:
     runs-on: ubuntu-latest
     steps:
-      - name: 检出仓库
+      - name: 检出仓库 / Checkout repository
         uses: actions/checkout@v4
 
-      - name: 拉取最新文章
+      - name: 拉取最新文章 / Fetch latest posts
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
           comment_tag_name: "BLOG-POST-LIST"
