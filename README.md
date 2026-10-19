@@ -66,7 +66,7 @@ My personal website is where all of these live — articles, works, and thoughts
   <img src="https://img.shields.io/badge/Own%20Repos-8-b45b63?style=flat-square" alt="Own Repos" />
   <img src="https://img.shields.io/badge/Forks-25-6d6d66?style=flat-square" alt="Forks" />
   <img src="https://img.shields.io/badge/Stars-5-b8860b?style=flat-square" alt="Stars" />
-  <img src="https://img.shields.io/badge/Commits-964-b45b63?style=flat-square" alt="Commits" />
+  <img src="https://img.shields.io/badge/Commits-967-b45b63?style=flat-square" alt="Commits" />
   <img src="https://img.shields.io/badge/Followers-2-b45b63?style=flat-square" alt="Followers" />
 </p>
 
@@ -74,7 +74,7 @@ My personal website is where all of these live — articles, works, and thoughts
 >
 > *Joined **2023-11-14** · Followers **2** · Following **8***
 
-<sub>数据同步于 / synced at 2026-10-18 13:49（UTC+8）</sub>
+<sub>数据同步于 / synced at 2026-10-19 16:48（UTC+8）</sub>
 <!-- STATS_SUMMARY:END -->
 
 <div align="center">
@@ -135,7 +135,7 @@ My personal website is where all of these live — articles, works, and thoughts
   <img src="https://img.shields.io/badge/HTML-5.2%25-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML 5.2%" />
 </p>
 
-<sub>最后更新 / updated at 2026-10-18 13:49（UTC+8）</sub>
+<sub>最后更新 / updated at 2026-10-19 16:48（UTC+8）</sub>
 <!-- LANG_STATS:END -->
 
 <sub>\* 统计口径为 GitHub Languages API 返回的**源码字节数**（不含 fork 仓库），与实际行数、文件数不完全等价。<br>
