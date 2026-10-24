@@ -40,11 +40,32 @@
 ## 🚀 精选项目 / Featured
 
 <!-- PINNED_REPOS:START -->
+**[bundle-stash](https://github.com/Xinyang-Gao/bundle-stash)** <sub>`Java` · ★ 1</sub>
+<sub>Shows the contents of all your bundles in a sidebar on container screens, with categories, search, and one-click deposit/withdraw.</sub>
+
+**[SVG2Desmos](https://github.com/Xinyang-Gao/SVG2Desmos)** <sub>`Python` · ★ 2</sub>
+<sub>Turn SVG graphics into math formulas you can directly paste into Desmos.</sub>
+
+**[xinyang-gao.github.io](https://github.com/Xinyang-Gao/xinyang-gao.github.io)** <sub>`TypeScript` · ★ 2</sub>
+<sub>我的个人网站 / My personal website</sub>
+
+**[cursor-fx-userscript](https://github.com/Xinyang-Gao/cursor-fx-userscript)** <sub>`JavaScript`</sub>
+<sub>A Tampermonkey userscript that replaces the system cursor with a smooth dot and ring cursor, featuring hover fitting, text caret mode, click spring scale, and scroll trail.</sub>
 <!-- PINNED_REPOS:END -->
 
 ## 📊 GitHub 数据 / Stats
 
 <!-- STATS_SUMMARY:START -->
+<p>
+  <img src="https://img.shields.io/badge/Public%20Repos-33-b45b63?style=flat-square&logo=github" alt="Public Repos" />
+  <img src="https://img.shields.io/badge/Own%20Repos-8-b45b63?style=flat-square" alt="Own Repos" />
+  <img src="https://img.shields.io/badge/Forks-25-6d6d66?style=flat-square" alt="Forks" />
+  <img src="https://img.shields.io/badge/Stars-5-b8860b?style=flat-square" alt="Stars" />
+  <img src="https://img.shields.io/badge/Commits-969-b45b63?style=flat-square" alt="Commits" />
+  <img src="https://img.shields.io/badge/Followers-2-b45b63?style=flat-square" alt="Followers" />
+</p>
+
+<sub>**2023-11-14** 加入 · 关注者 **2** · 关注中 **7** · 同步于 2026-10-25 00:04（UTC+8）</sub>
 <!-- STATS_SUMMARY:END -->
 
 <div align="center">
@@ -62,6 +83,29 @@
 <br>
 
 <!-- LANG_STATS:START -->
+**全部自有仓库代码总量 / Total own-repo code：`2.15 MB`**（2,256,792 字节 / bytes）
+
+覆盖 / covering **6** 种语言 / languages · 统计范围 / scope：**8** 个非 Fork 仓库 / non-fork repos
+
+| 语言 / Language | 占比 / Share | 代码量 / Size | 仓库数 / Repos |
+| :--- | :--- | ---: | ---: |
+| **TypeScript** | `▓▓▓▓▓▓▓░░░░░░░░░░░░░` 35.0% | 772.45 KB | 2 |
+| **CSS** | `▓▓▓▓▓░░░░░░░░░░░░░░░` 23.2% | 510.52 KB | 3 |
+| **JavaScript** | `▓▓▓░░░░░░░░░░░░░░░░░` 16.1% | 355.55 KB | 5 |
+| **Python** | `▓▓▓░░░░░░░░░░░░░░░░░` 15.1% | 332.70 KB | 4 |
+| **Java** | `▓░░░░░░░░░░░░░░░░░░░` 5.4% | 120.03 KB | 1 |
+| **HTML** | `▓░░░░░░░░░░░░░░░░░░░` 5.1% | 112.65 KB | 3 |
+
+<p>
+  <img src="https://img.shields.io/badge/TypeScript-35.0%25-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript 35.0%" />
+  <img src="https://img.shields.io/badge/CSS-23.2%25-663399?style=flat-square&logo=css3&logoColor=white" alt="CSS 23.2%" />
+  <img src="https://img.shields.io/badge/JavaScript-16.1%25-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript 16.1%" />
+  <img src="https://img.shields.io/badge/Python-15.1%25-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 15.1%" />
+  <img src="https://img.shields.io/badge/Java-5.4%25-B07219?style=flat-square&logo=openjdk&logoColor=white" alt="Java 5.4%" />
+  <img src="https://img.shields.io/badge/HTML-5.1%25-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML 5.1%" />
+</p>
+
+<sub>最后更新 / updated at 2026-10-25 00:04（UTC+8）</sub>
 <!-- LANG_STATS:END -->
 
 </details>
