@@ -24,6 +24,7 @@ jobs:
           feed_list: "https://xinyang-gao.github.io/rss.xml"
           max_post_count: 5
           readme_path: "README.md"
-          template: '<a href="$url"><b>$title</b></a> · <sub>$date</sub><br>'
+          template: |
+            - [$title]($url) · <sub>$date</sub>
           date_format: "yyyy年MM月dd日"
           gh_token: ${{ secrets.GITHUB_TOKEN }}

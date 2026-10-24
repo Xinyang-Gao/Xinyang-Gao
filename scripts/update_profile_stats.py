@@ -344,30 +344,17 @@ def render_stats_summary(data: dict, updated_at: str) -> str:
         items.append(("Commits", commits, ACCENT, None))
     items.append(("Followers", followers, ACCENT, None))
 
-    summary_zh = (
-        f"> **{joined}** 加入 GitHub · 关注者 **{followers}**"
-        f" · 关注中 **{following}**"
-        + (f" · 📮 Gists **{gists}**" if gists else "")
-    )
-    summary_en = (
-        f"> *Joined **{joined}** · Followers **{followers}**"
-        f" · Following **{following}**"
-        + (f" · Gists **{gists}**" if gists else "")
-        + "*"
-    )
-
     lines = ["<p>"]
     for label, value, color, logo in items:
         lines.append(f'  <img src="{badge(label, value, color, logo)}" alt="{label}" />')
-    lines += [
-        "</p>",
-        "",
-        summary_zh,
-        ">",
-        summary_en,
-        "",
-        f"<sub>数据同步于 / synced at {updated_at}（UTC+8）</sub>",
-    ]
+    lines.append("</p>")
+    lines.append("")
+    meta = (
+        f"<sub>**{joined}** 加入 · 关注者 **{followers}** · 关注中 **{following}**"
+        + (f" · Gists **{gists}**" if gists else "")
+        + f" · 同步于 {updated_at}（UTC+8）</sub>"
+    )
+    lines.append(meta)
     return "\n".join(lines)
 
 
@@ -420,16 +407,22 @@ def render_pinned(nodes: list[dict]) -> str | None:
     for node in nodes:
         language = (node.get("primaryLanguage") or {}).get("name")
         stars = node.get("stargazerCount", 0)
-        meta = " · ".join(
-            p for p in (language, f"★ {stars}" if stars else None) if p
-        )
+        meta_parts = []
+        if language:
+            meta_parts.append(f"`{language}`")
+        if stars:
+            meta_parts.append(f"★ {stars}")
+        meta = " · ".join(meta_parts)
+
         description = (node.get("description") or "").strip().replace("\n", " ")
-        lines.append(
-            f"- 🔗 [{node['name']}]({node['url']})"
-            + (f" — {description}" if description else "")
-            + (f" <sub>({meta})</sub>" if meta else "")
-        )
-    return "\n".join(lines)
+        heading = f"**[{node['name']}]({node['url']})**"
+        if meta:
+            heading += f" <sub>{meta}</sub>"
+        lines.append(heading)
+        if description:
+            lines.append(f"<sub>{description}</sub>")
+        lines.append("")
+    return "\n".join(lines).rstrip()
 
 
 # --------------------------------------------------------------------------- #
