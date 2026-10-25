@@ -166,8 +166,7 @@
 
 <br>
 
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->- [探囊取物](https://github.com/Xinyang-Gao/bundle-stash) · <sub>2026年00月30日</sub>- [SVG绘制动画](https://xinyang-gao.github.io/works/SVG绘制动画/) · <sub>2026年00月25日</sub>- [家乡的秋天](https://xinyang-gao.github.io/articles/家乡的秋天.html) · <sub>2026年00月18日</sub>- [我帮 Tooltip 治好了&quot;强迫换行症&quot;，过程比想象中曲折](https://xinyang-gao.github.io/articles/我帮Tooltip治好了强迫换行症过程比想象中曲折.html) · <sub>2026年00月27日</sub>- [pixiv图片检索](https://xinyang-gao.github.io/works/pixiv图片检索/) · <sub>2026年00月13日</sub><!-- BLOG-POST-LIST:END -->
 
 <sub>来自个人网站的 [RSS](https://xinyang-gao.github.io/rss.xml)，每天自动同步 / synced daily.</sub>
 
