@@ -28,16 +28,16 @@
 
 ---
 
-## 🧭 现在 / Now
+## 现在 / Now
 
-- 🎮 **在玩** · Minecraft（生电 / 极限生存）
-- 🌱 **在学** · TypeScript · Python
-- 🏗️ **在建** · [个人网站](https://github.com/Xinyang-Gao/xinyang-gao.github.io) 的持续迭代
-- 💡 **在想** · 下一个有意思的项目该写点什么
+- **在玩** · Minecraft（生电 / 极限生存）
+- **在学** · TypeScript · Python
+- **在建** · [个人网站](https://github.com/Xinyang-Gao/xinyang-gao.github.io) 的持续迭代
+- **在想** · 下一个有意思的项目该写点什么
 
 > 个人网站 [xinyang-gao.github.io](https://xinyang-gao.github.io) 是我存放这些东西的地方 —— 有文章、有作品，也有一些还没想好名字的思考。
 
-## 🚀 精选项目 / Featured
+## 项目 / Featured
 
 <!-- PINNED_REPOS:START -->
 **[bundle-stash](https://github.com/Xinyang-Gao/bundle-stash)** <sub>`Java` · ★ 1</sub>
@@ -53,7 +53,7 @@
 <sub>A Tampermonkey userscript that replaces the system cursor with a smooth dot and ring cursor, featuring hover fitting, text caret mode, click spring scale, and scroll trail.</sub>
 <!-- PINNED_REPOS:END -->
 
-## 📊 GitHub 数据 / Stats
+## 数据 / Stats
 
 <!-- STATS_SUMMARY:START -->
 <p>
@@ -78,7 +78,7 @@
 </div>
 
 <details>
-<summary>🧮 全部仓库语言统计 / Language stats across all repos</summary>
+<summary>语言统计 / Language stats </summary>
 
 <br>
 
@@ -111,7 +111,7 @@
 </details>
 
 <details>
-<summary>📈 贡献与奖杯 / Contributions &amp; trophies</summary>
+<summary>贡献与奖杯 / Contributions &amp; trophies</summary>
 
 <br>
 
@@ -125,7 +125,7 @@
 
 </details>
 
-## 🛠 技术栈 / Stack
+## 技术栈 / Stack
 
 <p>
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
@@ -142,33 +142,23 @@
 
 ---
 
-## 📫 找到我 / Find me
+## 找到我 / Find me
 
 | 渠道 / Channel | 地址 / Where |
 | :--- | :--- |
 | 网站 / Website | [xinyang-gao.github.io](https://xinyang-gao.github.io) |
-| 留言板 / Guestbook | [xinyang-gao.github.io/contact](https://xinyang-gao.github.io/contact/) |
-| 文章订阅 / RSS | [rss.xml](https://xinyang-gao.github.io/rss.xml) |
 | GitHub | [@Xinyang-Gao](https://github.com/Xinyang-Gao) |
-
-## 一些小事 / A few little things
-
-- 🎂 2010 年的冬天来到这个世界，2021 年写下第一行 `print("Hello World")`。
-- 🧊 Minecraft 是我的老朋友，从 2017 年放到现在的第一方块算起。
-- 🎨 偶尔画画：素描、水彩，画的是眼睛里剩下的那点光。
-- 🎧 写代码的时候，耳机里一定要有点声音。
-- 🤔 INTP 的日常：想得很多，写得很少，但总想把东西做得再漂亮一点。
 
 ---
 
 <details>
-<summary>📝 最近写的文章 / Recent posts</summary>
+<summary>最近写的文章 / Recent posts</summary>
 
 <br>
 
 <!-- BLOG-POST-LIST:START -->- [探囊取物](https://github.com/Xinyang-Gao/bundle-stash) · <sub>2026年00月30日</sub>- [SVG绘制动画](https://xinyang-gao.github.io/works/SVG绘制动画/) · <sub>2026年00月25日</sub>- [家乡的秋天](https://xinyang-gao.github.io/articles/家乡的秋天.html) · <sub>2026年00月18日</sub>- [我帮 Tooltip 治好了&quot;强迫换行症&quot;，过程比想象中曲折](https://xinyang-gao.github.io/articles/我帮Tooltip治好了强迫换行症过程比想象中曲折.html) · <sub>2026年00月27日</sub>- [pixiv图片检索](https://xinyang-gao.github.io/works/pixiv图片检索/) · <sub>2026年00月13日</sub><!-- BLOG-POST-LIST:END -->
 
-<sub>来自个人网站的 [RSS](https://xinyang-gao.github.io/rss.xml)，每天自动同步 / synced daily.</sub>
+<sub>From [RSS](https://xinyang-gao.github.io/rss.xml)</sub>
 
 </details>
 
@@ -176,6 +166,6 @@
 
 <div align="center">
 
-<sub>本页由 <a href="https://github.com/Xinyang-Gao/Xinyang-Gao/actions">GitHub Actions</a> 自动维护 · 数据每日 / 每周刷新</sub>
+<sub>由 <a href="https://github.com/Xinyang-Gao/Xinyang-Gao/actions">GitHub Actions</a> 定期维护</sub>
 
 </div>
